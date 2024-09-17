@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Nikita Savelyev</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+</head>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <p style="font-family: 'Outfit', sans-serif;"></p>
+  </body>
+<body>
+    <!-- Кастомный курсор -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Навигация -->
+    <nav>
+        <ul>
+            <li><a class="o1" href="index.html"><img src="img/custom.png" alt="Custom Icon" width="30px"></a></li>
+            <li class="desktopmenu"><a href="work.html">WORK</a></li>
+            <li class="desktopmenu"><a href="About.html">ABOUT</a></li>
+            <li class="social-media">
+                <a href="Služby.html">SLUŽBY</a>
+                <a href="#" class="email-link">EMAIL</a>
+            </li>
+            <li><a href="#" class="menu-button" onclick="showSidebar()"><img src="img/custom.png" alt="Menu Icon" width="30px"></a></li>
+        </ul>
+        <ul class="side-bar">
+            <li onclick="hideSidebar()"><a href="#"><img src="img/close.png" alt="Close Icon" width="30px"></a></li>
+            <li><a href="index.html">NS</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="Služby.html">Služby</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="#">@Mail</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Behance</a></li>
+        </ul>
+    </nav>
+
+    <!-- Текстовый оверлей -->
+    <div id="text-overlay" class="overlay-text">
+        <span id="text-content">LET'S CREATE<br>SOMETHING<br>SPECIAL<br>TOGETHER</span>
+    </div>
+
+    <!-- Логотип -->
+    <div class="name">
+        <h1><img src="img/foto.png" class="foto" alt="Photo"></h1>
+    </div>
+
+    <!-- Портфолио -->
+    <div class="portfolio">
+        <div class="image-container">
+          <a href="p1.html">
+            <img src="img/01.jpg" alt="Original Image" class="original-image">
+            <img src="img/on00.jpg" alt="Hover Image" class="hover-image"></a>
+        </div>
+        <div class="image-container">
+            <a href="p2.html">
+            <img src="img/02.jpg" alt="Original Image" class="original-image">
+            <img src="img/onw00.jpg" alt="Hover Image" class="hover-image"></a>
+        </div>
+        <div class="image-container">
+          <a href="p3.html">
+            <img src="img/03.jpg" alt="Original Image" class="original-image">
+            <img src="img/fd00.jpg" alt="Hover Image" class="hover-image"></a>
+        </div>
+        <div class="image-container">
+            <a href="p6.html">
+            <img src="img/04.jpg" alt="Original Image" class="original-image">
+            <img src="img/cs00.jpg" alt="Hover Image" class="hover-image"></a>
+        </div>
+        <div class="image-container">
+            <a href="p5.html">
+            <img src="img/05.jpg" alt="Original Image" class="original-image">
+            <img src="img/nk00.jpg" alt="Hover Image" class="hover-image"></a>
+        </div>
+        <div class="image-container">
+            <a href="p4.html">
+            <img src="img/06.jpg" alt="Original Image" class="original-image">
+            <img src="img/zp00.jpg" alt="Hover Image" class="hover-image"></a>
+        </div>
+        <div class="image-container">
+            <a href="p7.html">
+            <img src="img/07.jpg" alt="Original Image" class="original-image">
+            <img src="img/vo00.jpg" alt="Hover Image" class="hover-image"></a>
+        </div>
+        <div class="image-container">
+            <a href="p8.html">
+            <img src="img/08.jpg" alt="Original Image" class="original-image">
+            <img src="img/lo00.jpg" alt="Hover Image" class="hover-image"></a>
+        </div>
+        <div class="image-container">
+            <a href="#">
+            <img src="img/09.jpg" alt="Original Image" class="original-image">
+            <img src="img/0.jpg" alt="Hover Image" class="hover-image"></a>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn"></span>
+            
+            <form id="contact-form">
+                <label for="name">NAME</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">MESSAGE</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">SEND</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Ссылка назад -->
+    <div class="navbar">
+        <a href="#home" class="active">BACK TO TOP</a>
+    </div>
+
+
+
+
+    <div id="assistance-text01" class="assistance-text01">
+      <p>PROČ SI VYBRAT MĚ?</p>
+  </div>
+
+    <div id="assistance-text" class="assistance-text">
+      <p>Jako designér s vášní pro vytváření <strong>výrazných vizuálních zážitků</strong> přináším jedinečnou kombinaci <strong>kreativity</strong>, <strong>preciznosti</strong> a pozornosti k detailům. Ať už se jedná o <strong>branding</strong>, <strong>UI/UX</strong> nebo <strong>editoriální design</strong>, zaměřuji se na poskytování řešení, která nejen <strong>skvěle vypadají</strong>, ale také <strong>funkčně bezchybně</strong>. Mým cílem je pomoci vaší značce vyniknout a navázat smysluplné spojení s vaším publikem.</p>
+  </div>
+
+<div  id="assistance-text04" class="assistance-text04">
+    <a href="mailto:example@example.com"><strong><u>savelyev.graphic@gmail.com</u></strong></a>
+</div>
+
+    <!-- Сценарии -->
+    <script>
+        // Настройка кастомного курсора
+        var cursor = $(".cursor"),
+            follower = $(".cursor-follower");
+
+        var posX = 0,
+            posY = 0,
+            mouseX = 0,
+            mouseY = 0;
+
+        TweenMax.to({}, 0.016, {
+            repeat: -1,
+            onRepeat: function() {
+                posX += (mouseX - posX) / 9;
+                posY += (mouseY - posY) / 9;
+
+                TweenMax.set(follower, {
+                    css: {
+                        left: posX - 20,
+                        top: posY - 20
+                    }
+                });
+
+                TweenMax.set(cursor, {
+                    css: {
+                        left: mouseX,
+                        top: mouseY
+                    }
+                });
+            }
+        });
+
+        $(document).on("mousemove", function(e) {
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+        });
+
+        // Анимация текста при наведении
+        const textContent = document.getElementById("text-content");
+
+        function fadeOutText() {
+            textContent.classList.add('fade-out');
+            setTimeout(() => {
+                textContent.innerHTML = "UI/UX Design<br>Branding<br>Editorial Design<br>Visual Identity";
+                textContent.classList.remove('fade-out');
+                textContent.classList.add('fade-in');
+                setTimeout(() => {
+                    textContent.classList.remove('fade-in');
+                }, 500);
+            }, 500);
+        }
+
+        function fadeInText() {
+            textContent.classList.add('fade-out');
+            setTimeout(() => {
+                textContent.innerHTML = "LET'S CREATE<br>SOMETHING<br>SPECIAL<br>TOGETHER";
+                textContent.classList.remove('fade-out');
+                textContent.classList.add('fade-in');
+                setTimeout(() => {
+                    textContent.classList.remove('fade-in');
+                }, 500);
+            }, 500);
+        }
+
+        textContent.addEventListener("mouseenter", fadeOutText);
+        textContent.addEventListener("mouseleave", fadeInText);
+
+        // Открытие и закрытие модального окна
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("modal");
+            const openBtn = document.querySelector(".email-link");
+            const closeBtn = document.querySelector(".close-btn");
+            const form = document.getElementById("contact-form");
+
+            function openModal() {
+                modal.style.display = "flex";
+            }
+
+            function closeModal() {
+                modal.style.display = "none";
+            }
+
+            openBtn.addEventListener("click", function (event) {
+                event.preventDefault(); 
+                openModal();
+            });
+
+            closeBtn.addEventListener("click", closeModal);
+
+            window.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                closeModal();
+                alert("Your message has been sent!");
+            });
+        });
+
+        // Показывать и скрывать боковую панель
+        function showSidebar() {
+            $('.side-bar').css('display', 'flex');
+        }
+
+        function hideSidebar() {
+            $('.side-bar').css('display', 'none');
+        }
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var backToTopButton = document.querySelector(".navbar a[href='#home']");
+
+        backToTopButton.addEventListener("click", function (event) {
+            event.preventDefault(); // Отменяет стандартное поведение ссылки
+
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Плавный скролл
+            });
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

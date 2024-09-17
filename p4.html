@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/p1.css">
+    <title>Nikita Savelyev</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <!-- FancyBox CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+<!-- jQuery (обязательно для работы FancyBox) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- FancyBox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+</head>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <p style="font-family: 'Outfit', sans-serif;"></p>
+  </body>
+<body>
+    <!-- Кастомный курсор -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Навигация -->
+    <nav>
+        <ul>
+            <li><a class="o1" href="index.html"><img src="img/custom.png" alt="Custom Icon" width="30px"></a></li>
+            <li class="desktopmenu"><a href="work.html">WORK</a></li>
+            <li class="desktopmenu"><a href="About.html">ABOUT</a></li>
+            <li class="social-media">
+                <a href="Služby.html">SLUŽBY</a>
+                <a href="#" class="email-link">EMAIL</a>
+            </li>
+            <a href="#" class="menu-button" onclick="showSidebar(); return false;">
+                <img src="img/custom.png" alt="Menu Icon" width="30px">
+            </a>
+        </ul>
+        <ul class="side-bar">
+            <li onclick="hideSidebar()"><a href="#"><img src="img/close.png" alt="Close Icon" width="30px"></a></li>
+            <li><a href="index.html">NS</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="Služby.html">Služby</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="#">@Mail</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Behance</a></li>
+        </ul>
+    </nav>
+
+    <div class="work-section">
+        <div class="work-info">
+            <h2>ZNÁMÝ PRÁVNÍK – VAŠE CESTA K ODBORNÉ POMOCI</h2>
+            <p>V rámci projektu Známý právník jsem navrhl logotyp a vytvořil webovou stránku pro službu, která se specializuje na pomoc klientům při hledání vhodného právníka. Tento projekt byl zaměřen na vytvoření vizuálně atraktivní a funkční platformy, která usnadňuje uživatelům nalezení právního odborníka přesně na míru jejich potřebám.Webová stránka byla navržena s důrazem na uživatelskou přívětivost a efektivitu. 
+                <br> 
+
+                <br> <strong>Jednoduché zadání informací:</strong>  <br>Uživatelé mohou snadno a rychle zadat popis svého právního problému prostřednictvím intuitivního formuláře. Tento krok je klíčový pro správné zpracování jejich požadavku.
+                
+                <br> <strong>Rychlé a přesné doporučení:</strong>  <br>Na základě zadaných informací systém do následujícího pracovního dne vyhledá a doporučí až tři právníky, kteří se specializují na danou oblast. Tento proces je navržen tak, aby byl co nejrychlejší a nejefektivnější.
+                
+                <br> <strong>Bezpečnost a důvěrnost:</strong>  <br>Všechny osobní údaje uživatelů jsou chráněny a zůstávají v bezpečí. Webová stránka používá moderní šifrovací technologie k zajištění ochrany citlivých informací.
+                
+                <br>  <strong>Možnost přímého kontaktu nebo zprostředkování:</strong>  <br>Uživatelé mají možnost buď přímo kontaktovat vybrané právníky, nebo využít naše zprostředkovatelské služby, které usnadňují komunikaci a šetří čas.
+                
+                <br> <strong>Prezentace a přehlednost:</strong>  <br>Web je navržen s důrazem na čistý a přehledný design, který umožňuje snadnou navigaci a příjemný uživatelský zážitek.
+                
+                <br> <br> Tento projekt zahrnoval jak návrh vizuálního stylu, tak i technické aspekty webového vývoje. Cílem bylo vytvořit platformu, která by nejenom dobře reprezentovala značku Právní Expert, ale také poskytovala uživatelům efektivní a pohodlné řešení pro nalezení právní pomoci.</p>
+        </div>
+        <div class="work-gallery">
+            <a href="img/zp01.jpg" data-fancybox="gallery" data-caption="Описание изображения 1">
+                <img src="img/zp01.jpg" alt="Image 1">
+            </a>
+            <a href="img/zp02.jpg" data-fancybox="gallery" data-caption="Описание изображения 2">
+                <img src="img/zp02.jpg" alt="Image 2">
+            </a>
+            <a href="img/zp03.jpg" data-fancybox="gallery" data-caption="Описание изображения 3">
+                <img src="img/zp03.jpg" alt="Image 3">
+            </a>
+            <a href="img/zp04.jpg" data-fancybox="gallery" data-caption="Описание изображения 3">
+                <img src="img/zp04.jpg" alt="Image 3">
+            </a>
+            <a href="img/zp05.jpg" data-fancybox="gallery" data-caption="Описание изображения 3">
+                <img src="img/zp05.jpg" alt="Image 3">
+            </a>
+            
+            
+          
+            
+            
+        </div>
+      
+
+    
+
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn"></span>
+            
+            <form id="contact-form">
+                <label for="name">NAME</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">MESSAGE</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">SEND</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Ссылка назад -->
+    <div class="navbar">
+        <a href="#home" class="active">BACK TO TOP</a>
+    </div>
+
+
+
+
+    
+    <!-- Сценарии -->
+    <script>
+        // Настройка кастомного курсора
+        var cursor = $(".cursor"),
+            follower = $(".cursor-follower");
+
+        var posX = 0,
+            posY = 0,
+            mouseX = 0,
+            mouseY = 0;
+
+        TweenMax.to({}, 0.016, {
+            repeat: -1,
+            onRepeat: function() {
+                posX += (mouseX - posX) / 9;
+                posY += (mouseY - posY) / 9;
+
+                TweenMax.set(follower, {
+                    css: {
+                        left: posX - 20,
+                        top: posY - 20
+                    }
+                });
+
+                TweenMax.set(cursor, {
+                    css: {
+                        left: mouseX,
+                        top: mouseY
+                    }
+                });
+            }
+        });
+
+        $(document).on("mousemove", function(e) {
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+        });
+
+       
+
+        // Открытие и закрытие модального окна
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("modal");
+            const openBtn = document.querySelector(".email-link");
+            const closeBtn = document.querySelector(".close-btn");
+            const form = document.getElementById("contact-form");
+
+            function openModal() {
+                modal.style.display = "flex";
+            }
+
+            function closeModal() {
+                modal.style.display = "none";
+            }
+
+            openBtn.addEventListener("click", function (event) {
+                event.preventDefault(); 
+                openModal();
+            });
+
+            closeBtn.addEventListener("click", closeModal);
+
+            window.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                closeModal();
+                alert("Your message has been sent!");
+            });
+        });
+
+        // Показывать и скрывать боковую панель
+        function showSidebar() {
+            $('.side-bar').css('display', 'flex');
+        }
+
+        function hideSidebar() {
+            $('.side-bar').css('display', 'none');
+        }
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var backToTopButton = document.querySelector(".navbar a[href='#home']");
+
+        backToTopButton.addEventListener("click", function (event) {
+            event.preventDefault(); // Отменяет стандартное поведение ссылки
+
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Плавный скролл
+            });
+        });
+    });
+</script>
+
+</div>
+</body>
+
+</html>

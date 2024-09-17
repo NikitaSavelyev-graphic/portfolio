@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/About.css">
+    <title>Nikita Savelyev</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <!-- FancyBox CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+<!-- jQuery (обязательно для работы FancyBox) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- FancyBox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+</head>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <p style="font-family: 'Outfit', sans-serif;"></p>
+  </body>
+<body>
+    <!-- Кастомный курсор -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Навигация -->
+    <nav>
+        <ul>
+            <li><a class="o1" href="index.html"><img src="img/custom.png" alt="Custom Icon" width="30px"></a></li>
+            <li class="desktopmenu"><a onclick="goToSection()" href="work.html">WORK</a></li>
+            <li class="desktopmenu"><a href="About.html">ABOUT</a></li>
+            <li class="social-media">
+                <a href="Služby.html">SLUŽBY</a>
+                <a href="#" class="email-link">EMAIL</a>
+            </li>
+            <a href="#" class="menu-button" onclick="showSidebar(); return false;">
+                <img src="img/custom.png" alt="Menu Icon" width="30px">
+            </a>
+        </ul>
+        <ul class="side-bar">
+            <li onclick="hideSidebar()"><a href="#"><img src="img/close.png" alt="Close Icon" width="30px"></a></li>
+            <li><a href="index.html">NS</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="Služby.html">Služby</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="#">@Mail</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Behance</a></li>
+        </ul>
+    </nav>
+
+    <div id="wrapper">
+        <section class="name">
+            <h1>O MNĚ</h1>
+            <p>Ahoj! Jmenuji se Nikita Savelyev a jsem grafický designér s více než pěti lety zkušeností. Studoval jsem na UJEP v Ústí nad Labem a umělecké škole, se zaměřením na branding, UI/UX, editoriální design a ilustraci. Používám Adobe Creative Suite a iPad k vytváření unikátních a funkčních návrhů. Moje práce zahrnuje knihy, časopisy, zakázkové tetování a street art. Cením si důrazu na detaily, inovace a neustálé zlepšování svých dovedností. Mimo práci čerpám inspiraci z tetování a street artu, což mi pomáhá udržet kreativitu svěží.</p>
+     
+     
+            <h1><br><br>PROČ SI MĚ VYBRAT?</h1>
+            <p>01/ Komplexní přístup (práce s tiskovými i digitálními médii).
+                <br>02/ Vynikající poměr cena / kvalita / rychlost.
+                <br>03/ Dodržování termínů.
+                <br>04/ Osobní komunikace.
+                <br>05/ Bohaté zkušenosti.
+                <br>06/ Práce je mou vášní, není to pro mě rutina.
+                <br>07/ Zajištění, že investice do designu přinese klientovi hodnotu.
+                <br>08/ Pravidelné automatické zálohování a pečlivá archivace dat.
+                <br>09/ Transparentní ceny (žádné skryté náklady na grafiku v tisku či jiných službách).</p>
+        
+        
+            <h1><br><br>CO MĚ ODLIŠUJE OD KONKURENCE?</h1>
+            <p>Záleží na tom, kdo je konkurencí. Pokud považujeme ostatní freelancery za konkurenty, vyčnívám svým koncepčním myšlením a ekonomickým přístupem — design je pro mě investicí klienta, která se musí vyplatit.
+                <br> Pokud srovnáváme s malými reklamními agenturami, moje práce je efektivnější a tedy i nákladově výhodnější. Nebojím se velkých projektů, které zvládám efektivně díky investicím do specializovaného softwaru a kontinuálnímu sebevzdělávání.
+                <br><br>.</p>
+                
+            </section>
+    </div>
+      
+
+    
+
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn"></span>
+            
+            <form id="contact-form">
+                <label for="name">NAME</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">MESSAGE</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">SEND</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Ссылка назад -->
+    <div class="navbar">
+        <a href="#home" class="active">BACK TO TOP</a>
+    </div>
+
+
+
+
+    
+    <!-- Сценарии -->
+    <script>
+        // Настройка кастомного курсора
+        var cursor = $(".cursor"),
+            follower = $(".cursor-follower");
+
+        var posX = 0,
+            posY = 0,
+            mouseX = 0,
+            mouseY = 0;
+
+        TweenMax.to({}, 0.016, {
+            repeat: -1,
+            onRepeat: function() {
+                posX += (mouseX - posX) / 9;
+                posY += (mouseY - posY) / 9;
+
+                TweenMax.set(follower, {
+                    css: {
+                        left: posX - 20,
+                        top: posY - 20
+                    }
+                });
+
+                TweenMax.set(cursor, {
+                    css: {
+                        left: mouseX,
+                        top: mouseY
+                    }
+                });
+            }
+        });
+
+        $(document).on("mousemove", function(e) {
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+        });
+
+       
+
+        // Открытие и закрытие модального окна
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("modal");
+            const openBtn = document.querySelector(".email-link");
+            const closeBtn = document.querySelector(".close-btn");
+            const form = document.getElementById("contact-form");
+
+            function openModal() {
+                modal.style.display = "flex";
+            }
+
+            function closeModal() {
+                modal.style.display = "none";
+            }
+
+            openBtn.addEventListener("click", function (event) {
+                event.preventDefault(); 
+                openModal();
+            });
+
+            closeBtn.addEventListener("click", closeModal);
+
+            window.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                closeModal();
+                alert("Your message has been sent!");
+            });
+        });
+
+        // Показывать и скрывать боковую панель
+        function showSidebar() {
+            $('.side-bar').css('display', 'flex');
+        }
+
+        function hideSidebar() {
+            $('.side-bar').css('display', 'none');
+        }
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var backToTopButton = document.querySelector(".navbar a[href='#home']");
+
+        backToTopButton.addEventListener("click", function (event) {
+            event.preventDefault(); // Отменяет стандартное поведение ссылки
+
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Плавный скролл
+            });
+        });
+    });
+</script>
+
+
+
+</body>
+
+</html>
